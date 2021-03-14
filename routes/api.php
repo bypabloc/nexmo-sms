@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['cors'])->group(function () {
-    Route::get('/webhooks/inbound-sms', [App\Http\Controllers\SendController::class, 'get']);
-    Route::post('/webhooks/inbound-sms', [App\Http\Controllers\SendController::class, 'post']);
+    Route::get('/webhooks/inbound-sms', [App\Http\Controllers\InboundSmsController::class, 'get']);
+    Route::post('/webhooks/inbound-sms', [App\Http\Controllers\InboundSmsController::class, 'post']);
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
