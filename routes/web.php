@@ -15,18 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-}); 
+});
+
+Route::get('/test', function () {
+    return view('send');
+});
 
 Route::get('send', [App\Http\Controllers\SendController::class, 'index']);
 Route::post('send', [App\Http\Controllers\SendController::class, 'send']);
-
-
-
-/*
-Route::get('/send', function () {
-    return view('send');
-});
-*/
 
 Route::get('/dashboard', function () {
     return view('dashboard');
